@@ -25,7 +25,7 @@ it('covers accounting-purchase-requisitions-livewire components', function (): v
         'status' => RequisitionStatus::Draft,
     ]);
 
-    $component = new PurchaseRequisitions;
+    $component = new PurchaseRequisitions();
     $component->selectRequisition((int) $req->getKey());
     $component->status = 'submitted';
     $component->transitionStatus(app(TransitionRequisition::class));
